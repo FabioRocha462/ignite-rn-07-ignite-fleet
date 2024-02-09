@@ -21,7 +21,7 @@ module.exports = {
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.rennand.ignitefleet",
+      "bundleIdentifier": "com.fabiorocha.ignitefleet2",
       "config": {
         "googleMapsApiKey": process.env.GOOGLE_MAPS_API_KEY
       },
@@ -34,7 +34,7 @@ module.exports = {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#202024"
       },
-      "package": "com.rennand.ignitefleet",
+      "package": "com.fabiorocha.ignitefleet2",
       "permissions": [
         "ACCESS_FINE_LOCATION",
         "ACCESS_COARSE_LOCATION",

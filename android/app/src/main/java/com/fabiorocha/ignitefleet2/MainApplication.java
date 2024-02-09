@@ -1,4 +1,4 @@
-package com.rennand.ignitefleet;
+package com.fabiorocha.ignitefleet2;
 
 import android.app.Application;
 import android.content.res.Configuration;

@@ -8,29 +8,28 @@ import { Container, Title, Slogan } from './styles';
 
 import backgroundImg from '../../assets/background.png'
 import { Button } from '../../components/Button';
-
-import { ANDROID_CLIENT_ID, IOS_CLIENT_ID } from '@env';
+import { ANDROID_CLIENT_ID, WEB_CLIENT_ID } from '@env';
 
 WebBrowser.maybeCompleteAuthSession();
 
 export function SignIn() {
   const [isAuthenticating, setIsAuthenticating] = useState(false);
   const [_, response, googleSignIng] = Google.useAuthRequest({
-    androidClientId: ANDROID_CLIENT_ID,
-    iosClientId: IOS_CLIENT_ID,
-    scopes: ['profile', 'email']
+    androidClientId:ANDROID_CLIENT_ID,
+    expoClientId:WEB_CLIENT_ID,
+    scopes: ['profile', 'email'],
   });
-
+ 
   const app = useApp();
+
 
   function handleGoogleSignIn(){
     setIsAuthenticating(true);
-
     googleSignIng().then(response => {
       if(response?.type !== 'success') {
         setIsAuthenticating(false);
       }
-    })
+    });
   }
 
   useEffect(() => {
@@ -48,7 +47,7 @@ export function SignIn() {
         setIsAuthenticating(false);
       }
     }
-  },[response])
+  },[response]);
 
   return (
     <Container source={backgroundImg}>
