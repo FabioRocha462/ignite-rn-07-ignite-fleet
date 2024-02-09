@@ -12,7 +12,6 @@ import { useNetInfo } from '@react-native-community/netinfo';
 import theme from './src/theme';
 
 import { REALM_APP_ID } from '@env';
-console.log(REALM_APP_ID);
 
 import { Routes } from './src/routes';
 import { RealmProvider, syncConfig } from './src/libs/realm';
